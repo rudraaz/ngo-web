@@ -13,6 +13,7 @@ import Volunteer from "./components/Volunteer";
 import Contact from "./components/Contact";
 import Blog from "./components/Blog";
 import Donate from "./components/Donate";
+import ParallaxCTA from "./components/ParallaxCTA";
 
 // Home Page - All sections
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
       <Hero />
       <About />
       <Projects />
+      <ParallaxCTA />
       <Donate />
       <Team />
       <Volunteer />
