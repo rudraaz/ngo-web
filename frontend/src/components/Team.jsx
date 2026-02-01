@@ -120,26 +120,26 @@ const Team = () => {
                   alt={member.name}
                   className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-200">
-                  <div className="flex justify-center gap-2">
+                {/* Social icons overlay - visible on hover */}
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+                  <div className="flex gap-2">
                     <a
                       href="#"
-                      className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-[#0056D2] transition-colors"
+                      className="w-9 h-9 bg-white rounded-lg flex items-center justify-center text-gray-700 hover:bg-[#0056D2] hover:text-white transition-colors"
                     >
-                      <Linkedin className="w-3.5 h-3.5" />
+                      <Linkedin className="w-4 h-4" />
                     </a>
                     <a
                       href="#"
-                      className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-[#0056D2] transition-colors"
+                      className="w-9 h-9 bg-white rounded-lg flex items-center justify-center text-gray-700 hover:bg-[#0056D2] hover:text-white transition-colors"
                     >
-                      <Twitter className="w-3.5 h-3.5" />
+                      <Twitter className="w-4 h-4" />
                     </a>
                     <a
                       href="#"
-                      className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-[#0056D2] transition-colors"
+                      className="w-9 h-9 bg-white rounded-lg flex items-center justify-center text-gray-700 hover:bg-[#0056D2] hover:text-white transition-colors"
                     >
-                      <Mail className="w-3.5 h-3.5" />
+                      <Mail className="w-4 h-4" />
                     </a>
                   </div>
                 </div>
