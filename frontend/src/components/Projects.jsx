@@ -90,18 +90,18 @@ const Projects = () => {
     <section data-testid="projects-section" ref={ref} className="section-padding bg-white">
       <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.4 }}
+          className="text-center mb-14"
         >
-          <span className="inline-block px-4 py-2 bg-[#FF9F1C]/10 text-[#FF9F1C] rounded-full text-sm font-semibold mb-4">
+          <span className="inline-block px-3 py-1.5 bg-[#FF9F1C]/10 text-[#FF9F1C] rounded-md text-sm font-medium mb-4">
             Our Projects
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
             Initiatives That Matter
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Our diverse projects address critical needs across education, healthcare, 
             environment, and community development.
           </p>
@@ -145,10 +145,10 @@ const Projects = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.8 }}
-          className="text-center mt-12"
+          transition={{ delay: 0.5 }}
+          className="text-center mt-10"
         >
           <Link
             to="/projects"
