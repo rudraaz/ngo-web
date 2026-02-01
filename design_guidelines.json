@@ -1,0 +1,143 @@
+{
+  "identity": {
+    "name": "E1",
+    "role": "Creative Designer",
+    "mission": "Create a modern, elegant, and emotionally impactful NGO website."
+  },
+  "theme": {
+    "mode": "light",
+    "emotional_tone": "Trustworthy, Hopeful, Impactful, Modern",
+    "visual_style": "Clean, Minimalist, with bold color accents"
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Playfair Display, serif",
+      "weights": ["400", "700"],
+      "usage": "Main headings (H1, H2, H3). Use tight tracking for large sizes."
+    },
+    "body": {
+      "font_family": "Manrope, sans-serif",
+      "weights": ["400", "500", "600"],
+      "usage": "Body text, buttons, navigation, small labels."
+    }
+  },
+  "colors": {
+    "primary": {
+      "name": "Trust Blue",
+      "hex": "#0056D2",
+      "usage": "Primary buttons, key icons, links"
+    },
+    "secondary": {
+      "name": "Hope Orange",
+      "hex": "#FF9F1C",
+      "usage": "Secondary buttons, highlights, illustrations"
+    },
+    "accent": {
+      "name": "Action Magenta",
+      "hex": "#E91E63",
+      "usage": "Urgent CTAs (Donate), heart icons, emotional accents"
+    },
+    "background": {
+      "main": "#FFFFFF",
+      "secondary": "#F8F9FA",
+      "dark": "#1A1A1A"
+    },
+    "text": {
+      "primary": "#1A1A1A",
+      "secondary": "#4A4A4A",
+      "muted": "#717171",
+      "inverse": "#FFFFFF"
+    }
+  },
+  "layout_strategies": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "spacing": {
+      "section_padding": "py-20 lg:py-32",
+      "element_gap": "gap-8 lg:gap-12"
+    },
+    "grid_system": {
+      "projects": "Bento Grid: Mix of col-span-1 and col-span-2 items. Use aspect-square for some, aspect-video for others.",
+      "team": "Grid of cards: grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-white hover:bg-primary/90 rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300",
+      "secondary": "bg-white text-primary border-2 border-primary hover:bg-primary/5 rounded-full px-8 py-6 text-lg font-semibold transition-all duration-300",
+      "donate": "bg-accent text-white hover:bg-accent/90 rounded-full px-10 py-4 text-xl font-bold shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 animate-pulse-slow"
+    },
+    "cards": {
+      "style": "bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 overflow-hidden",
+      "project_card": "relative group overflow-hidden rounded-3xl"
+    },
+    "inputs": {
+      "style": "rounded-xl border-gray-200 focus:border-primary focus:ring-primary/20 bg-gray-50 focus:bg-white transition-all duration-200"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-white/80 border-b border-white/20 shadow-sm",
+    "gradients": "Use subtle mesh gradients in backgrounds using the brand colors at 5-10% opacity.",
+    "shadows": "Soft, diffuse shadows: shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
+    "animations": {
+      "scroll": "Use 'framer-motion' for scroll-triggered fade-ins and slide-ups.",
+      "hover": "Scale up images slightly on hover (scale-105).",
+      "micro": "Buttons should have active scale down (active:scale-95)."
+    }
+  },
+  "images": {
+    "hero": {
+      "url": "https://images.unsplash.com/photo-1758599669009-5a9002c09487",
+      "alt": "Diverse group of happy volunteers hiking together",
+      "description": "Main hero image showing community and joy."
+    },
+    "projects": {
+      "education": {
+        "url": "https://images.unsplash.com/photo-1759143101324-d375443f1955",
+        "alt": "Children learning in a classroom",
+        "description": "For the 'Education for All' project card."
+      },
+      "health": {
+        "url": "https://images.unsplash.com/photo-1766310550061-7cd0900f7c76",
+        "alt": "Surgeons scrubbing for surgery",
+        "description": "For the 'Medical Aid' project card."
+      },
+      "environment": {
+        "url": "https://images.unsplash.com/photo-1758390286700-06f93fddec45",
+        "alt": "Workers in a tea plantation",
+        "description": "For the 'Green Earth' project card."
+      }
+    },
+    "team": {
+      "volunteers": {
+        "url": "https://images.unsplash.com/photo-1758599669406-d5179ccefcb9",
+        "alt": "Volunteers cleaning up outdoors",
+        "description": "For the 'Join Us' or Volunteer section."
+      }
+    },
+    "logo": {
+      "url": "https://customer-assets-staging.emergentagent.com/job_change-makers/artifacts/szfol7tw_image.png",
+      "alt": "We Care Foundation Logo"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Implement the 'We Care Foundation' website using React and Tailwind CSS.",
+    "Use the provided color palette strictly. Do not use default Tailwind colors.",
+    "Use 'Playfair Display' for all headings and 'Manrope' for body text. Import them from Google Fonts.",
+    "Create a sticky header with glassmorphism effect.",
+    "The 'Donate' button in the header must be prominent (Accent color).",
+    "Build a 'Bento Grid' for the Projects section.",
+    "Ensure the 'Donate Now' section is high-impact with pre-selected amount buttons ($10, $25, $50, $100).",
+    "Use 'framer-motion' for smooth entrance animations as the user scrolls.",
+    "Do not implement real payment processing, just the UI.",
+    "Ensure the site is fully responsive (mobile-first).",
+    "Use the provided image URLs for their respective sections.",
+    "Add a 'data-testid' to all interactive elements."
+  ],
+  "universal_guidelines": [
+    "Avoid generic centered layouts. Use asymmetry where possible.",
+    "Use generous spacing (py-20, py-32).",
+    "Ensure high contrast for text readability.",
+    "Add hover states to all interactive elements.",
+    "Use 'sonner' for toast notifications."
+  ]
+}
