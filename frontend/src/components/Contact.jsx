@@ -55,58 +55,57 @@ const Contact = () => {
   };
 
   return (
-    <section data-testid="contact-section" ref={ref} className="section-padding bg-[#F8F9FA]">
+    <section data-testid="contact-section" ref={ref} className="section-padding bg-gray-50">
       <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.4 }}
+          className="text-center mb-14"
         >
-          <span className="inline-block px-4 py-2 bg-[#E91E63]/10 text-[#E91E63] rounded-full text-sm font-semibold mb-4">
+          <span className="inline-block px-3 py-1.5 bg-[#E91E63]/10 text-[#E91E63] rounded-md text-sm font-medium mb-4">
             Get in Touch
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
             Contact Us
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Have questions or want to learn more about our work? We'd love to hear from you. 
-            Reach out and let's start a conversation.
+          <p className="text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Have questions or want to learn more? We'd love to hear from you.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid lg:grid-cols-5 gap-10">
           {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-2 space-y-6"
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="lg:col-span-2 space-y-4"
           >
             {contactInfo.map((info, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm"
+                className="flex items-start gap-3 p-3 bg-white rounded-lg border border-gray-100"
               >
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
-                  style={{ backgroundColor: `${info.color}15` }}
+                  className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+                  style={{ backgroundColor: `${info.color}10` }}
                 >
-                  <info.icon className="w-5 h-5" style={{ color: info.color }} />
+                  <info.icon className="w-4 h-4" style={{ color: info.color }} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">{info.title}</h3>
+                  <h3 className="font-medium text-gray-900 text-sm mb-0.5">{info.title}</h3>
                   <p className="text-gray-600 text-sm">{info.content}</p>
                 </div>
               </div>
             ))}
 
-            {/* Map placeholder */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+            {/* Map */}
+            <div className="bg-white rounded-xl overflow-hidden border border-gray-100">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0975893692867!2d-122.41941568468173!3d37.77492997975903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus"
                 width="100%"
-                height="200"
+                height="180"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
@@ -118,15 +117,15 @@ const Contact = () => {
 
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
             className="lg:col-span-3"
           >
-            <div className="bg-white p-8 rounded-3xl shadow-sm">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-5">
+            <div className="bg-white p-6 rounded-xl border border-gray-100">
+              <h3 className="text-xl font-semibold text-gray-900 mb-5">Send Us a Message</h3>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <Input
                       type="text"
@@ -135,7 +134,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       data-testid="contact-name-input"
-                      className="w-full rounded-xl border-gray-200 focus:border-[#0056D2] focus:ring-[#0056D2]/20"
+                      className="w-full rounded-lg border-gray-200 focus:border-[#0056D2] focus:ring-[#0056D2]/20"
                       required
                     />
                   </div>
@@ -147,7 +146,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       data-testid="contact-email-input"
-                      className="w-full rounded-xl border-gray-200 focus:border-[#0056D2] focus:ring-[#0056D2]/20"
+                      className="w-full rounded-lg border-gray-200 focus:border-[#0056D2] focus:ring-[#0056D2]/20"
                       required
                     />
                   </div>
@@ -160,7 +159,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     data-testid="contact-subject-input"
-                    className="w-full rounded-xl border-gray-200 focus:border-[#0056D2] focus:ring-[#0056D2]/20"
+                    className="w-full rounded-lg border-gray-200 focus:border-[#0056D2] focus:ring-[#0056D2]/20"
                     required
                   />
                 </div>
@@ -171,17 +170,17 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     data-testid="contact-message-input"
-                    rows={6}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0056D2] focus:ring-2 focus:ring-[#0056D2]/20 resize-none"
+                    rows={5}
+                    className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-[#0056D2] focus:ring-2 focus:ring-[#0056D2]/20 resize-none text-sm"
                     required
                   />
                 </div>
                 <Button
                   type="submit"
                   data-testid="contact-submit-btn"
-                  className="bg-[#0056D2] hover:bg-[#004bb5] text-white rounded-full px-8 py-6 font-semibold text-lg transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2"
+                  className="bg-[#0056D2] hover:bg-[#004bb5] text-white rounded-lg px-6 py-5 font-medium transition-colors flex items-center gap-2"
                 >
-                  <Send className="w-5 h-5" />
+                  <Send className="w-4 h-4" />
                   Send Message
                 </Button>
               </form>

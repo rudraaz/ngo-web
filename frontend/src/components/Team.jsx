@@ -82,23 +82,23 @@ const Team = () => {
   };
 
   return (
-    <section data-testid="team-section" ref={ref} className="section-padding bg-[#F8F9FA]">
+    <section data-testid="team-section" ref={ref} className="section-padding bg-gray-50">
       <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.4 }}
+          className="text-center mb-14"
         >
-          <span className="inline-block px-4 py-2 bg-[#E91E63]/10 text-[#E91E63] rounded-full text-sm font-semibold mb-4">
+          <span className="inline-block px-3 py-1.5 bg-[#E91E63]/10 text-[#E91E63] rounded-md text-sm font-medium mb-4">
             Our Team
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Meet the People Behind Our Mission
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
+            Meet Our People
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Our dedicated team brings together diverse expertise and a shared commitment 
-            to creating positive change in the world.
+            to creating positive change.
           </p>
         </motion.div>
 
@@ -106,46 +106,46 @@ const Team = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
         >
           {team.map((member) => (
             <motion.div
               key={member.id}
               variants={itemVariants}
-              className="team-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group"
+              className="team-card bg-white rounded-xl overflow-hidden border border-gray-100 group"
             >
               <div className="relative">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <div className="flex justify-center gap-3">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-200">
+                  <div className="flex justify-center gap-2">
                     <a
                       href="#"
-                      className="w-9 h-9 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-[#0056D2] transition-colors"
+                      className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-[#0056D2] transition-colors"
                     >
-                      <Linkedin className="w-4 h-4" />
+                      <Linkedin className="w-3.5 h-3.5" />
                     </a>
                     <a
                       href="#"
-                      className="w-9 h-9 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-[#0056D2] transition-colors"
+                      className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-[#0056D2] transition-colors"
                     >
-                      <Twitter className="w-4 h-4" />
+                      <Twitter className="w-3.5 h-3.5" />
                     </a>
                     <a
                       href="#"
-                      className="w-9 h-9 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-[#0056D2] transition-colors"
+                      className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-[#0056D2] transition-colors"
                     >
-                      <Mail className="w-4 h-4" />
+                      <Mail className="w-3.5 h-3.5" />
                     </a>
                   </div>
                 </div>
               </div>
-              <div className="p-5">
-                <h3 className="text-lg font-bold text-gray-900">{member.name}</h3>
+              <div className="p-4">
+                <h3 className="text-base font-semibold text-gray-900">{member.name}</h3>
                 <p className="text-sm font-medium text-[#0056D2] mb-1">{member.role}</p>
                 <p className="text-xs text-gray-500">{member.bio}</p>
               </div>
